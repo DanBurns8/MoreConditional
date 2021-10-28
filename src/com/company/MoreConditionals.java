@@ -30,12 +30,26 @@ public class MoreConditionals {
     public static int findBestFit(int size1, int size2, int space) {
         if (size1 + size2 <= space) {
             return 3;
-        }  else if(size1+size2>space) {
-            return 0;
-        }else if (space - size1 > size2) {
+        } else if (space > size1 && size1 > size2) {
             return 1;
-        } else if (space - size2 > size1) {
+        } else if (space > size2 && size2 > size1) {
             return 2;
+        }else if (size1 > space && size2 < space){
+            return 2;
+        } else if (size2 > space && size1 < space){
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+    public static boolean makeBench(int small, int big, int goal) {
+        int a = big * 5;
+        int b = small * 1;
+        if(a+b>=goal && goal %5 <= b){
+            return true;
+        }else{
+            return false;
         }
     }
         public static void main (String[]args){
@@ -60,18 +74,19 @@ public class MoreConditionals {
             System.out.println("Find Best fit 2 3 1 is " + findBestFit(2,3,1));
             System.out.println("Find Best fit 6 3 4 is " + findBestFit(6,3,4));
             System.out.println("Find Best fit 3 6 4 is " + findBestFit(3,6,4));
+            //// Make Bench
+            System.out.println("Make bench 3 1 8 is " + makeBench(3,1,8)); //true
+            System.out.println("Make bench 3 1 9 is " + makeBench(3,1,9)); //false
+            System.out.println("Make bench 11 1 15 is " + makeBench(11,1,15)); //true
+            System.out.println("Make bench 4 2 15 is " + makeBench(4,2,15)); //false
+            System.out.println("Make bench 20 0 20 is " + makeBench(20,0,20)); //true
+            System.out.println("Make bench 3 4 20 is " + makeBench(3,4,20)); //true
+            System.out.println("Make bench 0 6 30 is " + makeBench(0,6,30)); //true
+            System.out.println("Make bench 0 5 30 is " + makeBench(0,5,30)); //false
+            System.out.println("Make benches 2 6 23 is " + makeBench(2,6,23)); //false
     }
 }
 
 
 
-//// Make Bench
-//System.out.println("Make bench 3 1 8 is " + makeBench(3,1,8));
-//System.out.println("Make bench 3 1 9 is " + makeBench(3,1,9));
-//System.out.println("Make bench 11 1 15 is " + makeBench(11,1,15));
-//System.out.println("Make bench 4 2 15 is " + makeBench(4,2,15));
-//System.out.println("Make bench 20 0 20 is " + makeBench(20,0,20));
-//System.out.println("Make bench 3 4 20 is " + makeBench(3,4,20));
-//System.out.println("Make bench 0 6 30 is " + makeBench(0,6,30));
-//System.out.println("Make bench 0 5 30 is " + makeBench(0,5,30));
-//System.out.println("Make benches 2 6 23 is " + makeBenches(2,6,23));
+
