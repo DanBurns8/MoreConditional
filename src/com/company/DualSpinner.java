@@ -8,13 +8,12 @@ public class DualSpinner {
          * inclusive. Complete the spin method below by assigning
          * this random integer to result.
          */
-        public int spin(int min, int max)
-        {
+        public static int spin(int min, int max){
             int result=0;
-            max =10;
-            min=0;
+            result =(int)(min+Math.random() * max);
+            System.out.println(result);
             return result;
-        }
+            }
 
         /** Simulates one round of the game as described in part (b).
          */

@@ -52,6 +52,7 @@ public class MoreConditionals {
             return false;
         }
     }
+
         public static void main (String[]args){
             // leap year
             System.out.println("2000 " + isLeapYear(2000));
