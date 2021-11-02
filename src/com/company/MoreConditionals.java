@@ -76,17 +76,44 @@ public class MoreConditionals {
             System.out.println("Find Best fit 6 3 4 is " + findBestFit(6,3,4));
             System.out.println("Find Best fit 3 6 4 is " + findBestFit(3,6,4));
             //// Make Bench
-            System.out.println("Make bench 3 1 8 is " + makeBench(3,1,8)); //true
-            System.out.println("Make bench 3 1 9 is " + makeBench(3,1,9)); //false
-            System.out.println("Make bench 11 1 15 is " + makeBench(11,1,15)); //true
-            System.out.println("Make bench 4 2 15 is " + makeBench(4,2,15)); //false
-            System.out.println("Make bench 20 0 20 is " + makeBench(20,0,20)); //true
-            System.out.println("Make bench 3 4 20 is " + makeBench(3,4,20)); //true
-            System.out.println("Make bench 0 6 30 is " + makeBench(0,6,30)); //true
-            System.out.println("Make bench 0 5 30 is " + makeBench(0,5,30)); //false
-            System.out.println("Make benches 2 6 23 is " + makeBench(2,6,23)); //false
+            System.out.println("Make bench 3 1 8 is " + makeBench(3,1,8));
+            System.out.println("Make bench 3 1 9 is " + makeBench(3,1,9));
+            System.out.println("Make bench 11 1 15 is " + makeBench(11,1,15));
+            System.out.println("Make bench 4 2 15 is " + makeBench(4,2,15));
+            System.out.println("Make bench 20 0 20 is " + makeBench(20,0,20));
+            System.out.println("Make bench 3 4 20 is " + makeBench(3,4,20));
+            System.out.println("Make bench 0 6 30 is " + makeBench(0,6,30));
+            System.out.println("Make bench 0 5 30 is " + makeBench(0,5,30));
+            System.out.println("Make benches 2 6 23 is " + makeBench(2,6,23));
     }
 }
+//        2000 true
+//        2004 true
+//        2003 false
+//        2100 false
+//        1/2/2010 is later than 1/2/2011 false
+//        1/2/2011 is later than 1/2/2010 true
+//        1/5/2010 is later than 3/2/2010 false
+//        3/2/2010 is later than 1/2/2010 true
+//        1/3/2010 is later than 1/2/2010 true
+//        1/2/2010 is later than 1/3/2010 false
+//        1/2/2010 is later than 1/2/2010 false
+//        4/8/2010 is later than 1/2/2011 false
+//        Find Best fit 2 3 6 is 3
+//        Find Best fit 4 3 6 is 1
+//        Find Best fit 3 4 6 is 2
+//        Find Best fit 2 3 1 is 0
+//        Find Best fit 6 3 4 is 2
+//        Find Best fit 3 6 4 is 1
+//        Make bench 3 1 8 is true
+//        Make bench 3 1 9 is false
+//        Make bench 11 1 15 is true
+//        Make bench 4 2 15 is false
+//        Make bench 20 0 20 is true
+//        Make bench 3 4 20 is true
+//        Make bench 0 6 30 is true
+//        Make bench 0 5 30 is false
+//        Make benches 2 6 23 is false
 
 
 
